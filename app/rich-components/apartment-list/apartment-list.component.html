@@ -1,0 +1,47 @@
+<div  class="content-text content-form" style="padding-bottom: 20px;margin-bottom: 20px !important;">
+    <p>{{'dropdown.Title' | translate}}</p>
+    <form [formGroup]="apartmentForm">
+    <mat-form-field appearance="outline">
+        <mat-label>{{'dropdown.FieldLabel' | translate}}</mat-label>
+        <mat-select formControlName="apartmentCtrl" (selectionChange)="onApartmentChange($event)" disableOptionCentering panelClass="myPanelClass">
+            <mat-option *ngFor='let item of intentConfigObj.options' [value]="item"> {{'dropdown.BuildingName' | translate}} 
+              {{item.tname}}</mat-option>
+        </mat-select>  
+      </mat-form-field>
+    </form>
+</div>
+<div *ngIf="isOptionSelected && isServiceFlow">
+  <div style="float: left;width: 50px;border-radius: 50%;"><img src="assets/images/chatbot.png"
+    style="float: left;width: 40px;border-radius: 50%;"></div> 
+    <p class="content-text">{{'service.CalendarTitle' | translate}}</p>
+    <mat-chip-list aria-label="Color selection">
+      <mat-chip class="bookly-btn" *ngFor="let chip of intentConfigObj.calendarBtns" selected (click)="onCalendarChipselect(chip.value)">
+        {{chip.transtext | translate}}
+      </mat-chip>
+    </mat-chip-list>
+  </div>
+<div *ngIf="isOptionSelected && !isServiceFlow">
+    <div style="float: left;width: 50px;border-radius: 50%;"><img src="assets/images/chatbot.png"
+        style="float: left;width: 40px;border-radius: 50%;"></div>
+    <div class="content-text summary">
+        <p style="width: 100%;margin-bottom: 0px;font-weight: 600;">{{'dropdown.SummaryHeader' | translate}} </p><br>
+        <p style="width: 100%;">{{'dropdown.Issue' | translate}} : 
+          <span>{{'stepper.ArrangePlumber' | translate}}</span> <br></p>
+        <p style="width: 100%;">{{'dropdown.Name' | translate}}: 
+          <span>{{'dropdown.ResidentName' | translate}}</span><br></p>
+        <p style="width: 100%;">{{'dropdown.Building' | translate}}: 
+          <span> {{'dropdown.BuildingName' | translate}} {{apartmentName}}</span><br></p>
+        <p style="width: 100%;">{{'dropdown.Room' | translate}}: 
+          <span>{{apartmentNumber}}</span><br></p>
+        <p style="width: 100%;">{{'dropdown.Mobile' | translate}} :
+        <span>{{mobileNumber}}</span> </p></div>
+        <div style="overflow: auto;white-space: nowrap;margin-top: 5%;width: 100vw;;">
+            <mat-chip-list aria-label="option selection">
+            <mat-chip class="bookly-btn" *ngFor="let chip of intentConfigObj.availableBtns" selected (click)="onChipselect(chip.transtext)" style="display: inline-block;">
+              {{chip.transtext | translate}}
+            </mat-chip>
+          </mat-chip-list>
+        </div>
+</div>
+<app-appointments ></app-appointments>
+

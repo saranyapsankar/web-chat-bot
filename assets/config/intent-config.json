@@ -1,0 +1,572 @@
+{
+    "intents": [
+        {
+            "name": "Stop",
+            "options": []
+        },
+        {
+            "name": "Welcome_Onload",
+            "options": [
+                {
+                    "key": 1,
+                    "name": "English",
+                    "lang": "en",
+                    "dispName": "en-US"
+                },
+                {
+                    "key": 2,
+                    "name": "日本語",
+                    "lang": "jp",
+                    "dispName": "ja-JP"
+                }
+            ]
+        },
+        {
+            "name": "Troubleshooting - yes",
+            "options": [
+                {}
+            ]
+        },
+        {
+            "name": "Troubleshooting",
+            "options": [
+                {}
+            ]
+        },
+        {
+            "name": "get_appointments",
+            "options": [
+                {}
+            ]
+        },
+        {
+            "name": "UserProvidesCanEat",
+            "options": [
+                {
+                    "key": 1,
+                    "name": "assessment.HowTextOne"
+                },
+                {
+                    "key": 2,
+                    "name": "assessment.HowTextTwo"
+                },
+                {
+                    "key": 2,
+                    "name": "assessment.HowTextThree"
+                }
+            ],
+            "buttonType": 0
+        },
+        {
+            "name": "UserProvidesHowEat",
+            "options": [
+                {
+                    "key": 1,
+                    "name": "assessment.SelfHelpYes"
+                },
+                {
+                    "key": 2,
+                    "name": "assessment.SelfHelpNo"
+                }
+            ],
+            "buttonType": 1
+        },
+        {
+            "name": "lost_item",
+            "options": [
+                {
+                    "key": 1,
+                    "name": "Yes ",
+                    "value": "Troubleshoot",
+                    "transtext": "stepper.Yes",
+                    "tvalue": "stepper.Troubleshoot"
+                },
+                {
+                    "key": 2,
+                    "name": "Arrange plumber",
+                    "value": "Arrange plumber",
+                    "transtext": "stepper.ArrangePlumber",
+                    "tvalue": "stepper.ArrangePlumber"
+                }
+            ]
+        },
+        {
+            "name": "schedule_service",
+            "options": [
+                {
+                    "key": 1,
+                    "name": "Wall mounted",
+                    "transtext": "dropdown.WallMounted"
+                },
+                {
+                    "key": 2,
+                    "name": "Ceiling mounted",
+                    "transtext": "dropdown.CeilingMounted"
+                }
+            ]
+        },
+        {
+            "name": "eating_assessment",
+            "options": [
+                {
+                    "key": 1,
+                    "name": "assessment.Confirm"
+                },
+                {
+                    "key": 2,
+                    "name": "assessment.ExistingPatient"
+                }
+            ],
+            "buttonType": 1
+        },
+        {
+            "name": "eating_assessment - existing",
+            "options": [
+                {
+                    "key": 1,
+                    "name": "assessment.PatientOne",
+                    "ref": "121756"
+                },
+                {
+                    "key": 2,
+                    "name": "assessment.PatientTwo",
+                    "ref": "203983"
+                },
+                {
+                    "key": 2,
+                    "name": "assessment.PatientThree",
+                    "ref": "221987"
+                }
+            ],
+            "buttonType": 0
+        },
+        {
+            "name": "eating_assessment - yes",
+            "options": [
+                {}
+            ]
+        },
+        {
+            "name": "UserProvidesHowEat - yes/no",
+            "options": [
+                {
+                    "key": 1,
+                    "name": "assessment.Yes"
+                },
+                {
+                    "key": 2,
+                    "name": "assessment.No"
+                }
+            ],
+            "buttonType": 1
+        },
+        {
+            "name": "select_apartment",
+            "options": [
+                {
+                    "key": 1,
+                    "name": "Park House ABC 605",
+                    "tname": " ABC 605",
+                    "apName": "ABC",
+                    "apNumber": " 605",
+                    "mobileNumber": "08011232289"
+                },
+                {
+                    "key": 2,
+                    "name": "Park House ABC 808",
+                    "tname": " ABC 808",
+                    "apName": "ABC",
+                    "apNumber": " 808",
+                    "mobileNumber": "09041223434"
+                },
+                {
+                    "key": 3,
+                    "name": "Park House ABC 1101",
+                    "tname": " ABC 1101",
+                    "apName": " ABC",
+                    "apNumber": " 1101",
+                    "mobileNumber": "09011112222"
+                },
+                {
+                    "key": 4,
+                    "name": "Park House DEF 101",
+                    "tname": " DEF 101",
+                    "apName": " DEF",
+                    "apNumber": " 101",
+                    "mobileNumber": "08049078645"
+                },
+                {
+                    "key": 6,
+                    "name": "Park House DEF 105",
+                    "tname": " DEF 105",
+                    "apName": " DEF",
+                    "apNumber": " 105",
+                    "mobileNumber": "09070005678"
+                },
+                {
+                    "key": 5,
+                    "name": "Park House DEF 1008",
+                    "tname": " DEF 1008",
+                    "apName": " DEF",
+                    "apNumber": " 1008",
+                    "mobileNumber": "09023888422"
+                }
+            ],
+            "availableBtns": [
+                {
+                    "key": 1,
+                    "name": "Yes  ",
+                    "value": "Yes ",
+                    "transtext": "stepper.Yes"
+                },
+                {
+                    "key": 2,
+                    "name": "Stop arrangement",
+                    "value": "Stop arrangement",
+                    "transtext": "dropdown.Stop"
+                },
+                {
+                    "key": 3,
+                    "name": "Wrong information",
+                    "value": "Wrong information",
+                    "transtext": "dropdown.WrongInfo"
+                }
+            ]
+        },
+        {
+            "name": "Welcome_Onload - en",
+            "options": [
+                {}
+            ]
+        },
+        {
+            "name": "UserProvidesRefNumber",
+            "options": [
+                {
+                    "key": 1,
+                    "name": "assessment.CanEatTextOne"
+                },
+                {
+                    "key": 2,
+                    "name": "assessment.CanEatTextTwo"
+                },
+                {
+                    "key": 2,
+                    "name": "assessment.CanEatTextThree"
+                },
+                {
+                    "key": 2,
+                    "name": "assessment.CanEatTextFour"
+                },
+                {
+                    "key": 2,
+                    "name": "assessment.CanEatTextFive"
+                }
+            ],
+            "buttonType": 0
+        },
+        {
+            "name": "schedule_service - wallmounted",
+            "countOptions": [
+                1,
+                2,
+                3,
+                4
+            ],
+            "options": [
+                {
+                    "key": 1,
+                    "name": "Park House ABC 605",
+                    "tname": " ABC 605",
+                    "apName": "ABC",
+                    "apNumber": " 605",
+                    "mobileNumber": "08011232289"
+                },
+                {
+                    "key": 2,
+                    "name": "Park House ABC 808",
+                    "tname": " ABC 808",
+                    "apName": "ABC",
+                    "apNumber": " 808",
+                    "mobileNumber": "09041223434"
+                },
+                {
+                    "key": 3,
+                    "name": "Park House ABC 1101",
+                    "tname": " ABC 1101",
+                    "apName": " ABC",
+                    "apNumber": " 1101",
+                    "mobileNumber": "09011112222"
+                },
+                {
+                    "key": 4,
+                    "name": "Park House DEF 101",
+                    "tname": " DEF 101",
+                    "apName": " DEF",
+                    "apNumber": " 101",
+                    "mobileNumber": "08049078645"
+                },
+                {
+                    "key": 6,
+                    "name": "Park House DEF 105",
+                    "tname": " DEF 105",
+                    "apName": " DEF",
+                    "apNumber": " 105",
+                    "mobileNumber": "09070005678"
+                },
+                {
+                    "key": 5,
+                    "name": "Park House DEF 1008",
+                    "tname": " DEF 1008",
+                    "apName": " DEF",
+                    "apNumber": " 1008",
+                    "mobileNumber": "09023888422"
+                }
+            ],
+            "nextOptions": [
+                {
+                    "key": 1,
+                    "name": "Next",
+                    "transtext": "stepper.Next",
+                    "isProceed": true
+                },
+                {
+                    "key": 2,
+                    "name": "Cancel",
+                    "transtext": "service.CancelBtn",
+                    "isProceed": false
+                }
+            ],
+            "calendarBtns": [
+                {
+                    "key": 1,
+                    "name": "Select Date  ",
+                    "value": true,
+                    "transtext": "service.SelectDateBtn"
+                },
+                {
+                    "key": 2,
+                    "name": "Cancel",
+                    "value": false,
+                    "transtext": "service.CancelBtn"
+                }
+            ]
+        },
+        {
+            "name": "schedule_service - ceilingmounted",
+            "countOptions": [
+                1,
+                2,
+                3,
+                4
+            ],
+            "options": [
+                {
+                    "key": 1,
+                    "name": "Park House ABC 605",
+                    "tname": " ABC 605",
+                    "apName": "ABC",
+                    "apNumber": " 605",
+                    "mobileNumber": "08011232289"
+                },
+                {
+                    "key": 2,
+                    "name": "Park House ABC 808",
+                    "tname": " ABC 808",
+                    "apName": "ABC",
+                    "apNumber": " 808",
+                    "mobileNumber": "09041223434"
+                },
+                {
+                    "key": 3,
+                    "name": "Park House ABC 1101",
+                    "tname": " ABC 1101",
+                    "apName": " ABC",
+                    "apNumber": " 1101",
+                    "mobileNumber": "09011112222"
+                },
+                {
+                    "key": 4,
+                    "name": "Park House DEF 101",
+                    "tname": " DEF 101",
+                    "apName": " DEF",
+                    "apNumber": " 101",
+                    "mobileNumber": "08049078645"
+                },
+                {
+                    "key": 6,
+                    "name": "Park House DEF 105",
+                    "tname": " DEF 105",
+                    "apName": " DEF",
+                    "apNumber": " 105",
+                    "mobileNumber": "09070005678"
+                },
+                {
+                    "key": 5,
+                    "name": "Park House DEF 1008",
+                    "tname": " DEF 1008",
+                    "apName": " DEF",
+                    "apNumber": " 1008",
+                    "mobileNumber": "09023888422"
+                }
+            ],
+            "nextOptions": [
+                {
+                    "key": 1,
+                    "name": "Next",
+                    "transtext": "stepper.Next",
+                    "isProceed": true
+                },
+                {
+                    "key": 2,
+                    "name": "Cancel",
+                    "transtext": "service.CancelBtn",
+                    "isProceed": false
+                }
+            ],
+            "calendarBtns": [
+                {
+                    "key": 1,
+                    "name": "Select Date  ",
+                    "value": true,
+                    "transtext": "service.SelectDateBtn"
+                },
+                {
+                    "key": 2,
+                    "name": "Cancel",
+                    "value": false,
+                    "transtext": "service.CancelBtn"
+                }
+            ]
+        },
+        {
+            "name": "select_apartment - yes",
+            "options": [
+                {}
+            ]
+        },
+        {
+            "name": "UserProvidesName",
+            "options": [
+                {}
+            ]
+        },
+        {
+            "name": "Welcome_Onload - jp",
+            "options": [
+                {}
+            ]
+        },
+        {
+            "name": "wrong_info - yes",
+            "options": [
+                {}
+            ]
+        },
+        {
+            "name": "UserProvidesDoesChoke - yes/no",
+            "options": [
+                {}
+            ]
+        },
+        {
+            "name": "wrong_info",
+            "options": [
+                {
+                    "key": 1,
+                    "name": "Park House ABC 605",
+                    "tname": " ABC 605",
+                    "apName": "ABC",
+                    "apNumber": " 605",
+                    "mobileNumber": "08011232289"
+                },
+                {
+                    "key": 2,
+                    "name": "Park House ABC 808",
+                    "tname": " ABC 808",
+                    "apName": "ABC",
+                    "apNumber": " 808",
+                    "mobileNumber": "09041223434"
+                },
+                {
+                    "key": 3,
+                    "name": "Park House ABC 1101",
+                    "tname": " ABC 1101",
+                    "apName": " ABC",
+                    "apNumber": " 1101",
+                    "mobileNumber": "09011112222"
+                },
+                {
+                    "key": 4,
+                    "name": "Park House DEF 101",
+                    "tname": " DEF 101",
+                    "apName": " DEF",
+                    "apNumber": " 101",
+                    "mobileNumber": "08049078645"
+                },
+                {
+                    "key": 6,
+                    "name": "Park House DEF 105",
+                    "tname": " DEF 105",
+                    "apName": " DEF",
+                    "apNumber": " 105",
+                    "mobileNumber": "09070005678"
+                },
+                {
+                    "key": 5,
+                    "name": "Park House DEF 1008",
+                    "tname": " DEF 1008",
+                    "apName": " DEF",
+                    "apNumber": " 1008",
+                    "mobileNumber": "09023888422"
+                }
+            ],
+            "availableBtns": [
+                {
+                    "key": 1,
+                    "name": "Yes  ",
+                    "value": "Yes ",
+                    "transtext": "stepper.Yes"
+                },
+                {
+                    "key": 2,
+                    "name": "Stop arrangement",
+                    "value": "Stop arrangement",
+                    "transtext": "dropdown.Stop"
+                },
+                {
+                    "key": 3,
+                    "name": "Wrong information",
+                    "value": "Wrong information",
+                    "transtext": "dropdown.WrongInfo"
+                }
+            ]
+        },
+        {
+            "name": "UserProvidesExistingData",
+            "options": [
+                {
+                    "key": 1,
+                    "name": "assessment.CanEatTextOne"
+                },
+                {
+                    "key": 2,
+                    "name": "assessment.CanEatTextTwo"
+                },
+                {
+                    "key": 2,
+                    "name": "assessment.CanEatTextThree"
+                },
+                {
+                    "key": 2,
+                    "name": "assessment.CanEatTextFour"
+                },
+                {
+                    "key": 2,
+                    "name": "assessment.CanEatTextFive"
+                }
+            ],
+            "buttonType": 0
+        }
+    ]
+}

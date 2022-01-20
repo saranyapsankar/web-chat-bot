@@ -1,0 +1,62 @@
+<div *ngIf="messageObject.userOwner" class="content-message right-content">
+    <p [ngStyle]="{'background-color': colorBackRight, 'color': colorFontRight}">
+        {{text}}
+    </p>
+</div>
+<div *ngIf="!messageObject.userOwner" class="content-message left-content" style="overflow: hidden;" fxLayout="column"
+    fxLayoutAlign="start start">
+    <div *ngIf="messageObject.intent != 'Welcome_Onload' && messageObject.intent != 'lost_item' && messageObject.intent !='Troubleshooting'
+    && messageObject.intent != 'select_apartment' &&  messageObject.intent != 'wrong_info' &&
+    messageObject.intent != 'schedule_service' && messageObject.intent != 'eating_assessment - existing'" style="display: flex;">
+        <div style="float: left;width: 50px;border-radius: 50%;"><img src="assets/images/chatbot.png"
+                style="float: left;width: 40px;border-radius: 50%;"></div>
+        <p [ngStyle]="{'background-color': colorBackLeft, 'color': colorFontLeft}">
+            {{text ?? 'Sorry I couldnt get that, could you rephrase your query?'}}
+        </p>
+    </div>
+    <div *ngIf="messageObject.intent == 'Welcome_Onload'" fxLayout="row" fxLayoutAlign="start start">
+        <div style="float: left;width: 50px;border-radius: 50%;margin-bottom: 20px;">
+            <img src="assets/images/chatbot.png" style="float: left;width: 40px;border-radius: 50%;">
+        </div>
+        <div class="lang-div">
+            <p [ngStyle]="{'background-color': colorBackLeft, 'color': colorFontLeft}">{{ text ?? mec.InitialMessage |
+                translate}}</p>
+            <mat-chip-list aria-label="Color selection">
+                <mat-chip class="bookly-btn" *ngFor="let chip of selectOptions" selected (click)="onLangChange(chip)">
+                    {{chip.name}}
+                </mat-chip>
+            </mat-chip-list>
+        </div>
+    </div>
+    <div *ngIf="messageObject.intent == 'lost_item' || messageObject.intent=='Troubleshooting' 
+                        || showAssessment || messageObject.intent == 'select_apartment' || messageObject.intent == 'wrong_info'
+                        || messageObject.intent == 'schedule_service' || messageObject.intent == 'get_appointments'"
+                         style="margin-bottom: 20px;">
+        <div style="float: left;width: 50px;border-radius: 50%;" *ngIf="!showAssessment || messageObject.intent == 'eating_assessment - existing'">
+            <img src="assets/images/chatbot.png" style="float: left;width: 40px;border-radius: 50%;">
+        </div>
+        <app-suggestion-chips *ngIf="messageObject.intent === 'lost_item'" [intentSelected]="messageObject.intent" ></app-suggestion-chips>
+        <app-hor-stepper *ngIf="messageObject.intent ==='Troubleshooting'"></app-hor-stepper>
+        <app-apartment-list [isOptionSelected]="messageObject.intent == 'select_apartment - yes'"
+            [isServiceFlow]="false" *ngIf="messageObject.intent ==='select_apartment' ||
+         messageObject.intent == 'wrong_info'" [intentSelected]="messageObject.intent"> </app-apartment-list>
+        <app-ac-service *ngIf="messageObject.intent === 'schedule_service'" [messageText]="text" [isTypeSelected]="messageObject.intent === 'schedule_service - wallmounted' ||
+         messageObject.intent === 'schedule_service - ceilingmounted'" [intentSelected]="messageObject.intent">
+        </app-ac-service>
+        <div *ngIf="showAssessment">
+            <app-assessment [intentSelected]="messageObject.intent" messageText="text"></app-assessment>
+        </div>
+    </div>
+    <div *ngIf="(messageObject.intent.includes('schedule_service') && messageObject.intent != 'schedule_service') 
+    || messageObject.intent == 'get_appointments'"
+        style="margin-bottom: 20px;">
+
+        <app-ac-service [messageText]="text" [isTypeSelected]="messageObject.intent === 'schedule_service - wallmounted' ||
+        messageObject.intent === 'schedule_service - ceilingmounted'" [intentSelected]="messageObject.intent">
+        </app-ac-service>
+        <div *ngIf="messageObject.intent === 'get_appointments'" style="margin: 0 65px;width: 40% !important;">
+            <button mat-raised-button class="action-btn bookly-btn"
+            (click)="onGetBookingselect()">{{'service.CheckAppointments' | translate}}</button> 
+        </div>
+    </div>
+</div>

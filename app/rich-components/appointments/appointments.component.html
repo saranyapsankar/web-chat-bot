@@ -1,0 +1,9 @@
+<div *ngIf="isVisible" id="test">
+    <div style="float: left;width: 50px;border-radius: 50%;"><img src="assets/images/chatbot.png"
+      style="float: left;width: 40px;border-radius: 50%;"></div> 
+      <p class="content-text">{{'service.ConfirmationText' | translate}}<br> <span id="messageTextSpan" [innerHtml]="messageText"></span></p>
+      <div style="margin: 0 65px;width: 40% !important;">
+        <button mat-raised-button class="action-btn bookly-btn"
+        (click)="onGetBookingselect()">{{'service.CheckAppointments' | translate}}</button> 
+    </div>
+    </div>

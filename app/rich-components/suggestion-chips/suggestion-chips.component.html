@@ -1,0 +1,6 @@
+<p class="content-text">{{'mec.DroppedRing' | translate}}</p>
+<mat-chip-list aria-label="Color selection">
+    <mat-chip class="bookly-btn" *ngFor="let chip of intentConfigObj?.options" selected (click)="onChipselect(chip.tvalue)">
+      {{chip.transtext | translate}}
+    </mat-chip>
+  </mat-chip-list>

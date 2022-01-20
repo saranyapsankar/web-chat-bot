@@ -1,0 +1,28 @@
+[
+    {
+        "id": 1,
+        "name": "How_To_Use",
+        "header":"LINE user guide",
+        "contentA":"You can control 📺 Devices & Scenes and check status of your home by tapping ”Smart Home” on the Menu at the bottom of screen.",
+        "ContentB":"Ask me like ”turn on AC”.",
+        "ContentC":"For Support ask me like ”can’t control ac”.",
+        "ContentD":"Here are some videos you can refer. Click on the options to watch them.",
+        "chips": [
+            {"name": "LiveSmart Bot_EN", "src":"4jHlDdRoA-M"},
+            {"name": "LiveSmart Bot_JP", "src":"otKPP01ZuN4"}
+        ]
+        
+    },
+    {
+        "id": 2,
+        "name": "Setup_Operation",
+        "header":"Setup & Operations",
+        "contentA":"How to use LINE Bot",
+        "ContentB":"Detailed guide on how to use LINE Bot",
+        "ContentC":"",
+        "chips": [
+            {"name": "LiveSmart Bot_EN", "src":"4jHlDdRoA-M"},
+            {"name": "LiveSmart Bot_JP", "src":"otKPP01ZuN4"}
+        ]
+    }
+]

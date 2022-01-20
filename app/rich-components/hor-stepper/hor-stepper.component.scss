@@ -1,0 +1,19 @@
+.hor-stepper-content h5 {
+    font-weight: 600 !important
+}
+
+.hor-stepper-content img {
+    height: 130px
+}
+
+@media (max-width:480px) {
+    .hor-stepper-content {
+        flex-direction: column !important;
+        margin: 0 !important
+    }
+
+    .hor-stepper-content img {
+        height: 180px !important
+    }
+
+}

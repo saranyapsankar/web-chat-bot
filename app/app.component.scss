@@ -1,0 +1,30 @@
+.chat-container {
+    width: 100vw;
+    height: 550px;
+    margin: auto;
+    margin-top: 50px;
+    padding: 0px;
+}
+.example-spacer {
+    flex: 1 1 auto;
+  }
+.header-text {
+    color: rgb(8, 38, 119) !important;
+    font-family: 'Noto Sans CJK JP','Noto Sans' !important;
+}
+.mat-toolbar-row, .mat-toolbar-single-row {
+    height: 75px !important;
+}
+.header-logo {
+    height: 65%;
+    width: 65%;
+    margin-right: 5%;
+    max-width: 60px;
+    max-height: 60px;
+    border-radius: 25%;
+}
+.header-bar {
+    margin: 0 10%;
+}
+
+  

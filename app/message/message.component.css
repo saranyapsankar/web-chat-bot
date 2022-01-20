@@ -1,0 +1,64 @@
+
+.right-content {
+    text-align: right;
+}
+
+.right-content p {
+    padding: 1rem;
+    border-radius: 1.5rem 0 1.5rem 0.5rem;
+    word-break: break-word;
+    white-space: pre-wrap;
+    margin-top: 20px;
+    margin-bottom: 0;
+    font-weight: 400;
+    line-height: 0.50rem;
+    background: #b8daff;
+    color: #212529;
+    box-shadow: 0 2px 8px 0 #afb2b5 !important;
+}
+
+.left-content p {
+    background: white;
+    color: #222b45;
+    display: inline-block;
+    padding: 5px;
+    border-radius: 10px;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+    flex-direction: column;
+    padding: 1rem;
+    border-radius: 0 1.5rem 0.5rem;
+    word-break: break-word;
+    white-space: pre-wrap;
+    max-width: calc(100vw - 320px);
+    font-weight: 400;
+    line-height: 1.20rem;
+    margin-top: 3%;
+    box-shadow: rgba(99, 99, 99, 0.2) 0px 2px 8px 0px;
+}
+.form-btn {
+    width: 160px;
+    margin: 0 auto;
+    color: #2196f3;
+    font-family: 'Noto Sans CJK JP';
+    font-weight: 500;
+    font-size: 15px;
+}
+.mat-card.enq-form {
+    border-top-style: solid;
+    border-top-width: .25rem;
+    border-top-color: #0095ff;
+    margin-left: 55px;
+    border-radius: 0 2.5rem 0.5rem 2.5rem;
+}
+.enq-form .mat-card-header {
+    padding: 0;
+    border-bottom: 1px solid #edf1f7;
+    border-top-left-radius: .25rem;
+    border-top-right-radius: .25rem;
+    color: #222b45;
+    font-family: Open Sans, sans-serif;
+    font-size: .9375rem;
+    font-weight: 600;
+    line-height: 1.5rem;
+}

@@ -1,0 +1,331 @@
+/* You can add global styles to this file, and also import other style files */
+@import "~@angular/material/prebuilt-themes/indigo-pink.css";
+@font-face {
+    font-family: 'Noto Sans CJK JP';
+    src: url(assets/fonts/NotoSansCJKjp-Regular.ttf) format("truetype");
+    font-weight:300;
+  }
+
+  @import url('https://fonts.googleapis.com/css?family=Noto+Sans&display=swap');
+* {
+    font-size: 14px;
+}
+p {
+    letter-spacing: 0.5px;
+    overflow-wrap: break-word;
+    border: 0;
+    outline: 0;
+    vertical-align: baseline;
+    overflow: hidden;
+    box-sizing: border-box;
+    line-height: 18px !important;
+    margin: 0 0 10px !important;
+    font-size: 14px !important;
+}
+body {
+    background-color: #e9ecef;
+    font-family: 'Noto Sans CJK JP','Noto Sans' !important;
+    height: 100%;
+    overflow: hidden;
+}
+.mat-toolbar {
+    background: white !important;
+    font-family: 'Noto Sans CJK JP','Noto Sans' !important;
+}
+.mat-chip.mat-standard-chip.mat-chip-selected.mat-primary {
+    background-color: white !important;
+    color: #03a9f4 !important;
+    width: 100% !important;
+    display: inline-block !important;
+    text-align: center !important;
+    box-shadow: rgb(60 64 67 / 30%) 0px 1px 2px 0px, rgb(60 64 67 / 15%) 0px 1px 3px 1px !important;
+    margin: 0 25px 30px !important;
+    height: 40px !important;
+}
+.btn-primary.disabled, .btn-primary:disabled {
+    color: #fff !important;
+}
+/* Works on Firefox */
+* {
+    scrollbar-width: thin;
+    scrollbar-color: rgb(114, 116, 112) #03a9f4;
+  }
+  
+  /* Works on Chrome, Edge, and Safari */
+  *::-webkit-scrollbar {
+    width: 2px;
+    height: 0px;
+  }
+  
+  *::-webkit-scrollbar-track {
+    background: white;
+  }
+  
+  *::-webkit-scrollbar-thumb {
+    background-color: rgb(114, 116, 112);
+    border-radius: 20px;
+    border: 3px solid rgb(114, 116, 112);
+  }
+  .label, p {
+    font-family: 'Noto Sans CJK JP','Noto Sans' !important;
+}
+
+.mat-radio-button.mat-accent.mat-radio-checked .mat-radio-outer-circle {
+    border-color: #03a9f4 !important;
+}
+.mat-radio-button.mat-accent .mat-radio-inner-circle, .mat-radio-button.mat-accent .mat-radio-ripple .mat-ripple-element:not(.mat-radio-persistent-ripple), .mat-radio-button.mat-accent.mat-radio-checked .mat-radio-persistent-ripple, .mat-radio-button.mat-accent:active .mat-radio-persistent-ripple{
+    background-color: #03a9f4 !important;
+}
+.btn-primary {
+    border-color: #03a9f4;
+    background-color: black;
+    margin-top: 21px;
+    width: 100px;
+    color: white;
+}
+.btn-primary:hover {
+    background-color: #033b548c;
+    border-color: #2196f3;
+}
+.mat-radio-button .mat-radio-ripple{
+    display: none;
+}
+.mat-step-header .mat-step-icon-selected, .mat-step-header .mat-step-icon-state-done, .mat-step-header .mat-step-icon-state-edit {
+    background-color: #03a9f4;
+    color: #fff;
+}
+.mat-stepper-vertical, .mat-stepper-horizontal {
+    display: block;
+    margin-left: 60px;
+    border-radius: 0 2rem 0.5rem 2rem;
+    width: 800px;
+    height: auto;
+    margin-bottom: 20px;
+}
+.mat-radio-container {
+    margin-left: 30px !important;
+    padding-right: 70px;
+}
+.action-btn {
+    width: 50%!important;
+    text-align: center!important;
+    box-shadow: 0 1px 2px 0 #3c40434d,0 1px 3px 1px #3c404326!important;
+    display: flex!important;
+    align-items: center;
+    place-content: center space-around;
+    border-radius: 10px !important;
+}
+
+.mat-chip.mat-standard-chip.mat-chip-selected.mat-primary {
+    // background-color: white !important;
+    // color: #03a9f4 !important;
+    background-color: #007bff !important;
+    color: white!important;
+    width: 30% !important;
+    display: inline-block !important;
+    text-align: center !important;
+    box-shadow: rgb(60 64 67 / 30%) 0px 1px 2px 0px, rgb(60 64 67 / 15%) 0px 1px 3px 1px !important;
+    margin: 0 10px 0 !important;
+    height: 40px !important;
+    display: flex !important;
+    align-items: center;
+    place-content: center space-around;
+}
+.mat-chip-list-wrapper { margin: 0 0 0 12% !important;  padding-bottom: 10px; }
+
+.mat-step-header .mat-step-icon-selected, .mat-step-header .mat-step-icon-state-done, .mat-step-header .mat-step-icon-state-edit {
+   // background-color: #f54949 !important;
+}
+.mat-stepper-horizontal, .mat-stepper-vertical {
+    width: 650px !important;
+    margin-top: 12px;
+    margin-left: 45px;
+}
+app-hor-stepper iframe {
+    border-radius: 10px;
+    width: 100%;
+    height: 250px;
+    width: 350px;
+}
+
+@media (max-width: 480px) {
+    .header-bar {
+        margin: 0 20% 0 0!important;
+    }
+    .main-container {
+        padding: 0 !important;
+        margin: 4% 1% 0!important;
+        overflow: hidden !important;
+    }
+    .left-content p {
+        max-width: calc(100vw - 70px) !important;
+        font-size: 14px !important
+    }
+    
+    app-ac-service .content-form {
+         max-width: calc(100vw - 70px)!important;
+    }
+    .input_msg_write input {
+        max-width: 345px;
+        margin-left: 5px;
+    }
+    .mat-stepper-horizontal, .mat-stepper-vertical {
+        width: calc(100vw - 70px)!important;
+    }
+    app-hor-stepper p {
+        width: 100% !important;
+        font-size: 14px !important
+    }
+    h5 {
+        font-size: 16px !important;
+    }
+    app-hor-stepper iframe {
+        border-radius: 10px;
+        width: 100%;
+        height: 170px;
+    }
+    .mat-chip-list-wrapper {
+        width: 100% !important;
+        flex-wrap: nowrap !important;
+    }
+    app-apartment-list .mat-chip.mat-standard-chip.mat-chip-selected.mat-primary {
+        max-width: fit-content !important;
+        width: auto !important;
+        font-size: 13px !important;
+        white-space: initial !important;
+    }
+    .mat-button, .mat-fab, .mat-flat-button,
+     .mat-icon-button, .mat-mini-fab, .mat-raised-button,
+      .mat-stroked-button, .mat-chip{
+        font-family: 'Noto Sans CJK JP';
+        font-size: 14px;
+    }
+    .mat-chip.mat-standard-chip.mat-chip-selected.mat-primary {
+       width: 33%!important;
+    }
+    .mat-horizontal-stepper-header {
+        padding: 1px !important;
+    }
+    .action-btn {
+        width: 100px!important;
+        height: 40px!important;
+        white-space: break-spaces!important;
+        line-height: 15px !important;
+    }
+}
+
+@media (min-width: 350px) and (max-width:480px) {
+    .type_msg {
+        width: 90vw !important;
+        margin: 0 auto;
+        display: block;
+    }
+    
+}
+
+@media (min-width: 200px) and (max-width:350px) {
+    .type_msg {
+        width: 85vw !important;
+    }
+    
+    body {
+        font-size: 14px !important;
+    }
+}
+
+.mat-stepper-horizontal-line {
+    border-top-width: 1px;
+    border-top-style: solid;
+    flex: auto;
+    height: 0;
+    margin: 0 5px;
+    min-width: 32px;
+    width: 80%;
+}
+.mat-horizontal-stepper-header:after, .mat-horizontal-stepper-header:before, .mat-stepper-horizontal-line {
+    border-top-color: #03a9f4 !important; //Green Color
+    border-top-width: 1px;
+    border-top-style: solid;
+}
+
+
+.mat-horizontal-stepper-header[aria-selected='true'] ~ .mat-stepper-horizontal-line{
+  border-top-color: hsl(0, 0%, 50%) !important;
+} 
+
+.mat-step-header.cdk-keyboard-focused, .mat-step-header.cdk-program-focused, .mat-step-header:hover:not([aria-disabled]), .mat-step-header:hover[aria-disabled=false]{
+    background-color: transparent;
+}
+
+.mat-step-header .mat-step-icon-state-edit + .mat-stepper-horizontal-line{
+    border-top-color: hsl(0, 0%, 50%) !important;
+  } 
+
+.lang-div .mat-chip-list-wrapper {
+    margin: 0 15px !important;
+    width: 50vw;
+}
+
+@media (min-width: 700px) {
+app-apartment-list .mat-chip-list-wrapper {
+   width: 52% ;
+   flex-wrap: nowrap ;
+   margin-left: 8% !important;
+}}
+
+.custom-select {
+  //  width: 60% !important;
+}
+.mat-form-field-infix {
+    width: 200px !important;
+    height: 60px !important;
+}
+.mat-form-field-appearance-outline .mat-form-field-infix {
+    padding: 0.5em 0 !important;
+}
+
+.mat-select-panel .mat-optgroup-label, .mat-select-panel .mat-option:focus, .mat-select-panel .mat-optgroup-label, .mat-select-panel .mat-option:hover {
+    background: #348fe2 !important;
+    color: white !important;
+}
+.mat-ripple.mat-option-ripple:hover, .mat-option-text:hover {
+    background: #348fe2 !important;
+    color: white !important;
+}
+.mat-select-panel .mat-optgroup-label, .mat-select-panel .mat-option {
+    background: transparent !important;
+    color: black !important;
+}
+.mat-select-panel {
+    border-radius: 5px !important;
+    outline: 0 !important;
+    border: 1px solid #818182 !important;
+}
+
+.myPanelClass{
+    margin-top: 30px !important; 
+}
+.welcome_suggestion .mat-chip.mat-standard-chip.mat-chip-selected.mat-primary {
+    width: 45% !important;
+}
+	
+.mat-form-field-flex {
+    height: 45px!important;
+}
+button:focus {
+    outline-color: transparent !important;
+}
+app-ac-service app-apartment-list .content-form {
+    margin: 0 0 0 15% !important;
+}
+mat-form-field {
+    width: 100% !important;
+    max-width: 250px !important;
+}
+app-apartment-list .mat-chip.mat-standard-chip.mat-chip-selected.mat-primary {
+    white-space: pre-wrap;
+}
+.count-block .mat-chip-list-wrapper {
+    padding-right: 30px !important;
+    margin-left: 70px !important;
+}

@@ -1,0 +1,21 @@
+<div *ngIf="intentSelected == 'UserProvidesDoesChoke - yes/no'">
+    <p>{{questionText}}</p>
+</div>
+<div  *ngIf="isDropDown" class="content-text content-form" style="padding-bottom: 20px;margin-bottom: 20px !important;">
+    <form [formGroup]="assessmentForm">
+    <mat-form-field appearance="outline">
+        <mat-label>{{'dropdown.FieldLabel' | translate}}</mat-label>
+        <mat-select formControlName="fieldCtrl" (selectionChange)="onOptionChange($event)" disableOptionCentering panelClass="myPanelClass">
+            <mat-option *ngFor='let item of selectOptions' [value]="item"> {{ item.name | translate}} 
+              {{item?.ref}}</mat-option>
+        </mat-select>  
+      </mat-form-field>
+    </form>
+</div>
+<div *ngIf="isSuggestionChips" class="lang-div">
+    <mat-chip-list aria-label="Color selection">
+        <mat-chip class="bookly-btn" *ngFor="let chip of availableOptions" selected (click)="onChipselect(chip.name)">
+          {{chip.name | translate}}
+        </mat-chip>
+      </mat-chip-list>
+</div>

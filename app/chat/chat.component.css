@@ -1,0 +1,75 @@
+/* for chat.component.css */
+.list-messages {
+    display: flex;
+    flex-direction: column;
+    height: 88%;
+    overflow: auto;
+}
+
+.left-message {
+    display: flex;
+    margin-bottom: 10px;
+}
+
+.right-message {
+    display: flex;
+    justify-content: flex-end;
+    margin-right: 4px;
+}
+
+.input-message {
+    border-top: 2px solid grey;
+    height: 12%;
+    background-color:lightskyblue;
+}
+
+.input-text-message {
+    height: 100%;
+    width: 80%;
+}
+
+.input-send {
+    color: #007bff;
+    position: relative;
+    left: 7px;
+    top: -22px;
+}
+.main-container {
+    padding: 2% 15% 0;
+    height: 86vh;
+}
+
+.type_msg {
+    position: absolute;
+    width:  calc(100vw - 25%);
+    bottom: 15px;
+}
+.msg_send_btn {
+    background: #007bff none repeat scroll 0 0;
+    border: medium none;
+    border-radius: 50%;
+    color: #fff;
+    cursor: pointer;
+    font-size: 20px;
+    height: 45px;
+    position: absolute;
+    top: 1px;
+    width: 45px;
+    box-shadow: rgba(60, 64, 67, 0.3) 0px 1px 2px 0px, rgba(60, 64, 67, 0.15) 0px 1px 3px 1px;
+}
+.input_msg_write input {
+    background: white none repeat scroll 0 0;
+    border: medium none;
+    color: #4c4c4c;
+    font-size: 15px;
+    min-height: 48px;
+    width: 90%;
+    margin-right: 10px;
+    border-radius: 20px;
+    padding: 10px;
+    box-shadow: rgba(60, 64, 67, 0.3) 0px 1px 2px 0px, rgba(60, 64, 67, 0.15) 0px 1px 3px 1px;
+    outline: none;
+  }
+
+  /* hhg */
+  

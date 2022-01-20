@@ -1,0 +1,18 @@
+<div class="main-container" >
+<div class="list-messages" id="msgContainer" #myScrollContainer>
+  <div *ngFor="let message of messages;let i = index;"  class="message-container aos-item" data-id={{i}}>
+    <app-message class="message" [messageObject]="message" [text]="message.text" 
+     [date]="message.date" [colorBackRight]="colorBackRight" [colorFontRight]="colorFontRight"
+    [colorBackLeft]="colorBackLeft" [colorFontLeft]="colorFontLeft" [owner]="message.userOwner"
+    [ngClass]="{'left-message': !message.userOwner, 'right-message': message.userOwner}" ></app-message>
+   
+  </div>
+</div>
+
+<div class="type_msg">
+  <div class="input_msg_write">
+    <input type="text" class="write_msg" [(ngModel)]="textInput" (keyup.enter)="onKey()" placeholder="Type a message"/>
+    <button class="msg_send_btn" type="button" (click)="saveTextMessage()"><i class="fa fa-paper-plane-o" aria-hidden="true"></i></button>
+  </div>
+</div>
+</div>

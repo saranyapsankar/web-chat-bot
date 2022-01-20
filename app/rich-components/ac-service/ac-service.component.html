@@ -1,0 +1,43 @@
+<div  class="content-text content-form" *ngIf="!isTypeSelected">
+    <p>{{ messageText }}</p>
+    <form [formGroup]="apartmentForm">
+    <mat-form-field appearance="outline">
+        <mat-label>{{'dropdown.FieldLabel' | translate}}</mat-label>
+        <mat-select formControlName="acTypeCtrl" (selectionChange)="onACTypeChange($event)" disableOptionCentering panelClass="myPanelClass">
+            <mat-option *ngFor='let item of intentConfigObj?.options' [value]="item"> 
+                {{item.transtext | translate}}</mat-option>
+        </mat-select>  
+      </mat-form-field>
+    </form>
+</div>
+<div *ngIf="isTypeSelected" class="count-block" style="width: 100%;overflow-x: auto;margin-bottom: 20px;">
+    <mat-chip-list aria-label="option selection">
+        <mat-chip *ngFor="let chip of intentConfigObj?.countOptions" selected (click)="onCountChipselect(chip)" style="display: inline-block;">
+          {{chip}}
+        </mat-chip>
+      </mat-chip-list>
+</div>
+<div *ngIf="showacSelectionSummary">
+    <div style="float: left;width: 50px;border-radius: 50%;"><img src="assets/images/chatbot.png"
+        style="float: left;width: 40px;border-radius: 50%;"></div>
+    <div class="content-text summary">
+        <p style="width: 100%;margin-bottom: 0px;font-weight: 600;">{{'service.SummaryText' | translate}} </p><br>
+        <p style="width: 100%;"><h7>{{'service.ServiceName' | translate}} :</h7>  <br></p>
+        <p style="width: 100%;"><h7>{{ acTypeSelected | translate}} x {{acCount}}</h7> <br></p>
+        <p style="width: 100%;">{{'service.Charge' | translate}} :
+            <span> {{'service.AcCharge' | translate}}</span> <br></p>
+        <p style="width: 100%;">{{'service.Tax' | translate}}: 
+          <span> {{'service.AcTax' | translate}} </span><br></p>
+        <p style="width: 100%;">{{'service.Total' | translate}}: 
+          <span>{{'service.AcTotal' | translate}}</span><br></p></div>
+        <div style="overflow: auto;white-space: nowrap;margin-top: 5%;width: 100vw;;">
+            <mat-chip-list aria-label="option selection">
+            <mat-chip class="bookly-btn" *ngFor="let chip of intentConfigObj?.nextOptions" selected (click)="onNextChipselect(chip)" style="display: inline-block;">
+              {{chip.transtext | translate}}
+            </mat-chip>
+          </mat-chip-list>
+        </div>
+</div>
+<app-apartment-list [intentSelected]="intentSelected" [isOptionSelected]="false" [isServiceFlow]="true" *ngIf="isApartmentSelection">
+</app-apartment-list>
+

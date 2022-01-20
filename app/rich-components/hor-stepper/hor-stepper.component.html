@@ -1,0 +1,57 @@
+<mat-stepper>
+    <mat-step label="" >
+        <div class="hor-stepper-content" fxLayout="row" fxLayoutAlign="space-between center" fxLayoutGap="3px">
+            <img src="assets/images/faucet_content.PNG" style="height: 130px;">
+            <div fxLayout="column" fxLayoutAlign="space-around stretch">
+                <h5>{{'stepper.StepOneHeader' | translate}}</h5>
+                <p>{{'stepper.StepOneContent' | translate}}
+                </p>
+
+            </div>
+        </div>
+        <div style="float: right;">
+            <button mat-button matStepperNext class="action-btn bookly-btn">{{'stepper.Next' | translate}}</button>
+        </div>
+    </mat-step>
+    <mat-step label="" >
+        <div class="hor-stepper-content" fxLayout="row" fxLayoutAlign="space-between center" fxLayoutGap="10px" style="margin: 0px -16px;">
+            <youtube-player videoId="_VX5UUcd60w" suggestedQuality="highres" origin='http://localhost:4200'
+                [height]="170" [width]="130" [startSeconds]="4" [endSeconds]="8">
+            </youtube-player>
+            <div fxLayout="column" fxLayoutAlign="space-between stretch">
+                <h5>{{'stepper.StepTwoHeader' | translate}}</h5>
+                <p>{{'stepper.StepTwoContent' | translate}}
+                </p>
+                <div style="float: right;" fxLayout="row" fxLayoutGap="10px" fxLayoutAlign="space-around center">
+                    <button mat-button matStepperPrevious class="action-btn bookly-btn">{{'stepper.Back' | translate}}</button>
+                    <button mat-button matStepperNext class="action-btn bookly-btn">{{'stepper.Next' | translate}}</button>
+                </div>
+            </div>
+        </div>
+       
+    </mat-step>
+    <mat-step label="">
+        <div class="hor-stepper-content" fxLayout="row" fxLayoutAlign="space-between center" fxLayoutGap="10px">
+            <img src="assets/images/customercare.PNG" style="height: 130px;">
+            <div fxLayout="column" fxLayoutAlign="space-between stretch">
+                <h5>{{'stepper.StepThreeHeader' | translate}}</h5>
+                <p>{{'stepper.StepThreeContent' | translate}}
+                </p>
+
+            </div>
+        </div>
+        <div fxLayout="row" fxLayoutGap="10px" fxLayoutAlign="space-around center">
+            <button mat-button class="action-btn bookly-btn" (click)="onSubmit(confirmText)">{{'stepper.Yes' | translate}} </button>
+            <button mat-button matStepperNext class="action-btn bookly-btn" (click)="onSubmit(arrangeText)">
+                {{'stepper.ArrangePlumber' | translate}}</button>
+        </div>
+    </mat-step>
+    <ng-template matStepperIcon="phone">
+        <!-- <i class="fas fa-faucet"></i> -->
+        <img src="assets/images/faucet.png" style="width: 15px;height: 20px;" />
+        <!-- <mat-icon>call_end</mat-icon> -->
+    </ng-template>
+    <ng-template matStepperIcon="chat">
+        <mat-icon>forum</mat-icon>
+    </ng-template>
+</mat-stepper>
